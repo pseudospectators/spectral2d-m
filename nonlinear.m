@@ -1,4 +1,4 @@
-function [nlk]=nonlinear(uk)
+function [nlk]=nonlinear(time,uk)
     %% computes the non-linear terms + penalization in Fourier space.    
     % you can also add explicit laplacian (explicit diffusion) if you
     % want to use higher order time stepping (maybe RK4) without
@@ -6,7 +6,7 @@ function [nlk]=nonlinear(uk)
     global params
     
     if strcmp(params.moving_obstacle,'yes')
-        create_mask();
+        create_mask(time);
     end
 
     % compute velocity in phys space
