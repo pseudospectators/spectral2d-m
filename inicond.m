@@ -7,7 +7,7 @@ function uk = inicond()
             vork = exp(-0.001*(params.Kx.^2+params.Ky.^2) ) .* fft2(vor); % smooth it
             uk = vor2u(vork);
         case 'meanflow'
-            u = zeros(params.nx,params.ny,1:2);
+            u = zeros(params.nx,params.ny,2);
             u(:,:,1) = 1;
             u(:,:,2) = 0;
             uk = coftxy_2d(u);

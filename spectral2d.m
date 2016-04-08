@@ -10,9 +10,9 @@ it   = 1;
 %---------------------------
 % here, all case-specific options are hidden:
 %---------------------------
-%PARAMS_turbulent_cylinder;
-%PARAMS_uniform_cylinder;
-PARAMS_moving_cylinder;
+% PARAMS_turbulent_cylinder;
+PARAMS_uniform_cylinder;
+% PARAMS_moving_cylinder;
 
 % initialize grid, wavenumbers, etc
 geometry_wavenumbers;
